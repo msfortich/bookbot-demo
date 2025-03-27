@@ -1,77 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>BookBot Chat – Powered by Dialogflow</title>
-  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      text-align: center;
-      padding: 60px 20px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>BookBot Chat – Powered by Dialogflow</title>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Georgia', serif;
+        background-color: #fff9f3;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        min-height: 100vh;
+        box-sizing: border-box;
+      }
 
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
 
-    p.subtitle {
-      font-style: italic;
-      color: #f0f0f0;
-      margin-bottom: 40px;
-    }
+      p.subtitle {
+        font-style: italic;
+        color: #555;
+        margin-bottom: 10px;
+      }
 
-    df-messenger {
-      position: fixed;
-      bottom: 16px;
-      right: 16px;
-    }
+      .links {
+        margin-bottom: 40px;
+      }
 
-    footer {
-      margin-top: 60px;
-      font-size: 0.95em;
-      color: #ddd;
-    }
+      .links a {
+        margin: 0 10px;
+        color: #333;
+        text-decoration: underline;
+        font-weight: 500;
+      }
 
-    .links a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: underline;
-      font-weight: 500;
-    }
+      .links a:hover {
+        color: #000;
+      }
 
-    .links a:hover {
-      color: #fffa;
-    }
-  </style>
-</head>
-<body>
+      .image-section {
+        margin: 40px 0;
+        max-width: 600px;
+        width: 100%;
+      }
 
-  <h1>📚 BookBot</h1>
-  <p class="subtitle">Your literary companion for quotes, facts, and fun.</p>
+      .image-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
 
-  <df-messenger
-    intent="WELCOME"
-    chat-title="BookBot"
-    agent-id="d5a8e6d4-7193-4db9-b0f7-f93004def761"
-    language-code="en"
-    chat-icon=""
-    wait-open
-  ></df-messenger>
+      df-messenger {
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+      }
 
-  <footer>
-    Made by <strong>Madi Fortich</strong> · Powered by Dialogflow<br />
+      footer {
+        margin-top: auto;
+        padding-top: 60px;
+        font-size: 0.95em;
+        color: #888;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>📚 BookBot</h1>
+    <p class="subtitle">Your literary companion for quotes, facts, and fun.</p>
+
     <div class="links">
       <a href="https://github.com/msfortich" target="_blank">GitHub</a> |
       <a href="https://www.linkedin.com/in/madifortich/" target="_blank">LinkedIn</a> |
-      <a href="https://your-portfolio-site.com" target="_blank">Portfolio</a>
+      <a href="https://peaceful-dessert-5b8.notion.site/Madi-Fortich-1b8bceb6717380399e2bf0fd3fab565b?pvs=4" target="_blank">Portfolio</a>
     </div>
-  </footer>
 
-</body>
+    <div class="image-section">
+      <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Bookshelf image" />
+    </div>
+
+    <df-messenger
+      intent="WELCOME"
+      chat-title="BookBot"
+      agent-id="d5a8e6d4-7193-4db9-b0f7-f93004def761"
+      language-code="en"
+      chat-icon=""
+      wait-open
+    ></df-messenger>
+
+    <footer>
+      Made by <strong>Madi Fortich</strong> · Powered by Dialogflow
+    </footer>
+
+  </body>
 </html>
