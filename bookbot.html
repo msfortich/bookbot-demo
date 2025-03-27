@@ -1,9 +1,9 @@
-<!-- bookbot.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>BookBot Chat Demo</title>
+    <title>BookBot Chat</title>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -11,22 +11,26 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh;
         margin: 0;
-        background-color: #f4f4f4;
+        padding: 40px;
+        background-color: #f5f5f5;
       }
       h2 {
         margin-bottom: 20px;
-        color: #333;
+      }
+      df-messenger {
+        width: 100%;
+        max-width: 400px;
       }
     </style>
   </head>
   <body>
     <h2>Chat with BookBot 📚</h2>
-    <iframe
-      height="430"
-      width="350"
-      src="https://bot.dialogflow.com/d5a8e6d4-7193-4db9-b0f7-f93004def761">
-    </iframe>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="BookBot"
+      agent-id="d5a8e6d4-7193-4db9-b0f7-f93004def761"
+      language-code="en"
+    ></df-messenger>
   </body>
 </html>
