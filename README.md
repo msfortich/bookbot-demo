@@ -1,7 +1,7 @@
 # bookbot-demo
 # 📚 BookBot – A Literary Chatbot Built with Dialogflow
 
-**BookBot** is a friendly, book-themed chatbot designed for readers and publishing enthusiasts. Built using **Google Dialogflow**, BookBot shares famous literary quotes and fun book facts using natural language understanding and a clean, embedded chat interface.
+**BookBot** is a friendly, book-themed chatbot designed for readers and publishing enthusiasts. Built using **Google Dialogflow**, BookBot shares famous literary quotes and fun book facts.
 
 ---
 
